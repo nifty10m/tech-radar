@@ -1,0 +1,514 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>10M Tech Radar</title>
+<link rel="shortcut icon" href="https://10m.de/favicons/favicon.ico">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<style type="text/css">
+  body {
+    font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
+    font-size: 20pt;
+    padding-bottom: 50px;
+  }
+  h3 {
+    margin-top: 50px;
+  }
+  li {
+    margin: 25px 50px 0 0;
+  }
+  table {
+    width: 1400px;
+    margin: 0 50px 0 50px;
+  }
+  td {
+    width: 50%;
+    vertical-align: top;
+    padding-right: 60px;
+  }
+</style>
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "10M Tech Radar — 2018",
+  quadrants: [
+    { name: "Tools" },
+    { name: "Infrastructure" },
+    { name: "Languages" },
+    { name: "Frameworks" }
+  ],
+  rings: [
+    { name: "ADOPT", color: "#93c47d" },
+    { name: "TRIAL", color: "#93d2c2" },
+    { name: "ASSESS", color: "#fbdb84" },
+    { name: "HOLD", color: "#efafa9" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries: [
+      {
+          "quadrant": "1",
+          "ring": "0",
+          "label": "AWS Beanstalk",
+          "active": "false",
+          "link": "",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "1",
+          "label": "Cloudfront",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "2",
+          "label": "Gradle AWS Plugin",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "3",
+          "label": "AWS SAM",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "3",
+          "label": "MS Windows",
+          "active": "false",
+          "link": " ",
+          "moved": "-1"
+      },
+      {
+          "quadrant": "2",
+          "ring": "1",
+          "label": "Java 8",
+          "active": "false",
+          "link": " ",
+          "moved": "-1"
+      },
+      {
+          "quadrant": "2",
+          "ring": "0",
+          "label": "Typescript",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "3",
+          "label": "JavaScript",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "1",
+          "label": "Groovy",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "2",
+          "label": "Kotlin",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "3",
+          "label": "C#",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "3",
+          "label": "VBScript",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "3",
+          "label": "LotusScript",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "SpringBoot",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "Flyway",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "2",
+          "label": "AWS DynamoDB",
+          "active": "false",
+          "link": "",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "Angular",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "Hibernate",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "1",
+          "label": "NgXS",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "2",
+          "label": "Redux Java",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "2",
+          "label": "Vaadin 11",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "3",
+          "label": "Vaadin 7",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "3",
+          "label": "Activiti",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "2",
+          "label": "Serverless",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "Spock",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "2",
+          "label": "JUnit 5",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "1",
+          "label": "Kubernetes",
+          "active": "false",
+          "link": " ",
+          "moved": "1"
+      },
+      {
+          "quadrant": "1",
+          "ring": "1",
+          "label": "Ansible",
+          "active": "false",
+          "link": " ",
+          "moved": "1"
+      },
+      {
+          "quadrant": "1",
+          "ring": "0",
+          "label": "Docker",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "1",
+          "ring": "0",
+          "label": "Postgres",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "IntelliJ",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "1",
+          "label": "VSC",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "3",
+          "label": "SourceSafe",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "zsh",
+          "active": "false",
+          "link": " ",
+          "moved": "1"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "homebrew",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "2",
+          "label": "PAW",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "Gitlab",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "0",
+          "label": "Material Design",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "curl",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "1",
+          "label": "Markdown",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "1",
+          "label": "PO Editor",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "0",
+          "label": "Confluence",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "3",
+          "label": "JavaFX",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "3",
+          "label": "Eclipse",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "3",
+          "label": "Maven",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "3",
+          "ring": "2",
+          "label": "Node.JS",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "2",
+          "label": "Cypress",
+          "active": "false",
+          "link": " ",
+          "moved": "1"
+      },
+      {
+          "quadrant": "1",
+          "ring": "2",
+          "label": "GraalVM",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "2",
+          "ring": "2",
+          "label": "Java11",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      },
+      {
+          "quadrant": "0",
+          "ring": "2",
+          "label": "Trello",
+          "active": "false",
+          "link": " ",
+          "moved": "0"
+      }
+  ]  //ENTRIES
+});
+</script>
+
+<table>
+<tr>
+<td>
+
+<h3>What is the Tech Radar?</h3>
+
+<p>
+The 10M Tech Radar is a list of technologies, complemented by an assessment result, called <i>ring assignment</i>. We use four rings with the following semantics:
+</p>
+
+<ul>
+<li><b>ADOPT</b> &mdash; Technologies we have high confidence in to serve our purpose, also in large scale. Technologies with a usage culture in our 10M production environment, low risk and recommended to be widely used.</li>
+<li><b>TRIAL</b> &mdash; Technologies that we have seen work with success in project work to solve a real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL technologies are slightly more risky; some engineers in our organization walked this path and will share knowledge and experiences.</li>
+<li><b>ASSESS</b> &mdash; Technologies that are promising and have clear potential value-add for us; technologies worth to invest some research and prototyping efforts in to see if it has impact. ASSESS technologies have higher risks; they are often brand new and highly unproven in our organisation. You will find some engineers that have knowledge in the technology and promote it, you may even find teams that have started a prototyping effort.</li>
+<li><b>HOLD</b> &mdash; Technologies not recommended to be used for new projects. Technologies that we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for new projects, but usually can be continued for existing projects.</li>
+</ul>
+
+</td><td>
+
+<h3>What is the purpose?</h3>
+
+<p>
+The Tech Radar is a tool to inspire and support engineering teams at 10M to pick the best technologies for new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology decisions and continuously evolve our technology landscape. Based on the <a href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>, our Tech Radar sets out the changes in technologies that are interesting in software development &mdash; changes that we think our engineering teams should pay attention to and consider using in their projects.
+</p>
+
+<h3>How do we maintain it?</h3>
+
+<p>
+The Tech Radar is maintained by the <i>10M Technologists Guild</i> &mdash; an open group of  senior 10M technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain the Tech Radar documents, including this public version. Assignment of technologies to rings is the outcome of ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar depends on active participation and input from all engineering teams at 10M.
+</p>
+
+<p>
+There is also an <a href="https://techradar.zalando.net/">internal version of the Tech Radar</a> that contains background information about each technology &mdash; when to use it, pros and cons, main risks, which teams at 10M are using it, and for what purpose.
+</p>
+
+<p>
+<i>BTW, if you would like to create your own Tech Radar &mdash; we have <a href="https://github.com/zalando/tech-radar">open sourced the code</a> to generate this visualization.</i>
+</p>
+
+</td></tr>
+</table>
+
+
+</body>
+</html>
